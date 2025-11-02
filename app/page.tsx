@@ -3,6 +3,7 @@ import { HowToPlay } from "@/components/how-to-play"
 import { GameFeatures } from "@/components/game-features"
 import { GameModes } from "@/components/game-modes"
 import { FAQ } from "@/components/faq"
+import { Waitlist } from "@/components/waitlist"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 
@@ -16,6 +17,7 @@ export default function Home() {
         <GameFeatures />
         <GameModes />
         <FAQ />
+        <Waitlist />
       </main>
       <Footer />
     </div>

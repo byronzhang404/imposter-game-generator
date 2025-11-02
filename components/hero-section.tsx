@@ -1,3 +1,4 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Users, Sparkles, Zap } from "lucide-react"
@@ -18,15 +19,15 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Button size="lg" className="text-lg px-8 py-6 font-semibold w-full sm:w-auto">
-              Start a New Game
-            </Button>
             <Button
               size="lg"
-              variant="secondary"
-              className="text-lg px-8 py-6 font-semibold w-full sm:w-auto bg-secondary text-secondary-foreground hover:bg-secondary/80"
+              className="text-lg px-8 py-6 font-semibold w-full sm:w-auto"
+              onClick={() => {
+                const el = document.getElementById("waitlist")
+                el?.scrollIntoView({ behavior: "smooth" })
+              }}
             >
-              Use the Word Generator
+              Join the Waitlist
             </Button>
           </div>
 

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Eye } from "lucide-react"
+import { ImposterLogoIcon } from "@/components/icons/imposter-logo"
 
 export function Header() {
   return (
@@ -8,7 +8,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary">
-            <Eye className="h-5 w-5 text-primary-foreground" />
+            <ImposterLogoIcon className="h-5 w-5 text-primary-foreground" />
           </div>
           <span className="text-xl font-bold">Imposter Game</span>
         </Link>
@@ -38,11 +38,17 @@ export function Header() {
           >
             FAQ
           </Link>
+          <Link
+            href="/blog"
+            className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Blog
+          </Link>
         </nav>
 
-        <Button size="lg" className="font-semibold">
+        {/* <Button size="lg" className="font-semibold">
           Start Playing
-        </Button>
+        </Button> */}
       </div>
     </header>
   )
