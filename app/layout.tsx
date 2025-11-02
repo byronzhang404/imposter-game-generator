@@ -26,6 +26,11 @@ export const metadata: Metadata = {
     "spy game",
   ],
   generator: "v0.app",
+  icons: {
+    icon: "/imposter-logo.svg",
+    shortcut: "/imposter-logo.svg",
+    apple: "/imposter-logo.svg",
+  },
 }
 
 export default function RootLayout({
