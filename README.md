@@ -20,6 +20,24 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Project Modules (Imposter Game Core)
+
+- `GET /create` – Host creates a room, gets Host link and Player link.
+- `GET /room/[id]` – Room page: join with nickname, host controls game flow.
+
+Current implementation uses localStorage for simulation when Supabase env is missing.
+
+### Supabase Setup (optional, for realtime)
+
+Add environment variables to `.env.local`:
+
+```
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
+```
+
+When provided, `lib/supabaseClient.ts` exposes a Supabase client instance. You can wire realtime and persistence on top of the existing UI.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
